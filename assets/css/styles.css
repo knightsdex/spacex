@@ -1930,6 +1930,7 @@ header {
 @media (max-width: 980px) {
   html {
     scroll-padding-top: 80px;
+    font-size: 17px;
   }
 
   h1 {
@@ -2025,6 +2026,7 @@ header {
 @media (max-width: 600px) {
   html {
     scroll-padding-top: 64px;
+    font-size: 15px;
   }
 
   h1 {
@@ -2175,6 +2177,79 @@ header {
   padding: 0.4rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
+}
+
+.contract-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  .contract-box__label {
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .contract-box__row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+  }
+
+  .contract-box__address {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.6rem 1.1rem;
+    user-select: all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 320px;
+  }
+
+  .contract-box__copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.9rem;
+    background: rgba(30, 144, 255, 0.12);
+    border: none;
+    border-left: 1px solid rgba(30, 144, 255, 0.3);
+    color: rgba(30, 144, 255, 0.9);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 200ms ease, color 200ms ease;
+    font-family: monospace;
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba(30, 144, 255, 0.25);
+      color: #fff;
+    }
+
+    &.contract-box__copy--copied {
+      background: rgba(52, 211, 153, 0.18);
+      border-left-color: rgba(52, 211, 153, 0.4);
+      color: rgba(52, 211, 153, 1);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contract-box .contract-box__address {
+    font-size: 0.68rem;
+    max-width: 180px;
+  }
 }
 
 .nav-buy-btn {
